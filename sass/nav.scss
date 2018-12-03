@@ -1,0 +1,252 @@
+// Skiplinks
+
+
+#skiplinks_nav {
+	position: absolute; 
+	padding: 0;
+	z-index: 900;
+}
+.skiplinks-menu {
+	
+	a {
+		position: fixed; 
+		top: 75px;
+		left: -25rem;
+		padding: $grid-padding $grid-padding*2;
+		padding-right: $grid-padding*6;
+		border-top-right-radius: 60px;
+		border-bottom-right-radius: 60px;
+		background-color: $secondary-color;
+		font-family: $font-title;
+		color: #fff;
+		text-decoration: none;
+		transition: left .4s ease-in-out;
+	
+		&:hover, &:focus {
+			left: 0;
+			outline: none;
+			
+			&::after {
+				content: '';
+				display: block;
+				width: 104px; 
+				height: 104px;
+				background: url(img/icon/star-white.svg) 0 0 no-repeat;
+				background-size: 104px 104px;
+				position: absolute;
+				top: -65%;
+				right: -15%;
+				animation: rotate-forever 10s linear infinite;
+			}
+		}
+
+		.highcontrast & {
+			background-color: #000;
+		}
+
+	}
+	
+}
+
+
+// Contrast
+
+.contrast-switch {
+	position: fixed;
+	right: $grid-padding;
+	top: 0;
+	padding-top: $grid-padding;
+	padding-bottom: $grid-padding;
+	padding-left: 22px;
+	z-index: 900;		
+	
+	@include rwd(large) {
+		right: $grid-padding;
+		padding-top: $grid-padding*2;
+	}
+	@include rwd(wide) {
+		right: $grid-padding*2;
+		top: .2em;
+		padding-top: $grid-padding*2;
+	}
+	
+	&::before {
+		content: '';
+		display: block;
+		width: 16px; height: 16px;
+		position: absolute;
+		top: $grid-padding;
+		left: 0;
+		background: url(img/icon/contrast.svg) 0 0 no-repeat;
+		
+		@include rwd(large) {
+			top: $grid-padding*2; 
+		}
+	}
+	
+	& button {
+		position: relative;
+		display: block;
+		font-family: $font-title;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.1rem;
+		padding: 0;
+		background-color: transparent;
+		
+		@include rwd(large) {
+			font-size: 1.3rem; 
+		}
+	}
+	
+	& button:focus, & button:hover {
+		border-bottom: #fff 2px solid;
+		outline: none;
+		background-color: transparent;
+	}
+}
+
+.toggle-remove { display: none !important; }
+
+
+.highcontrast {
+	.toggle-highcontrast { display: none; }
+	.toggle-remove { display: block !important; }
+}
+
+
+
+// Main nav
+
+
+#main_nav {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	background-color: $secondary-color;
+	z-index: 3;
+	
+	.highcontrast & {
+		background-color: #000;
+	}
+}
+
+.main-menu {
+	display: flex;
+	flex-wrap: wrap;
+	padding-right: 12rem;
+	
+	& > li {
+		display: block;
+		position: relative;
+		color: #fff;
+		font-family: $font-title;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		
+		@include rwd(large) {
+			font-size: 1.4rem;
+			margin: 0 $grid-padding;
+			
+			&::after {
+				content: " ~ ";
+				margin-left: $grid-padding;
+			}
+			&:last-child::after {
+				content: none;
+			}
+		}
+		@include rwd(wide) {
+			font-size: 1.6rem;
+		}
+		
+		&.hidden, &.hidden a {
+			display: none;	
+		}
+		
+		a {
+			display: inline-block;
+			padding: $grid-padding;
+			text-decoration: none;
+			
+			@include rwd(large) {
+				padding: $grid-padding*2 $grid-padding;
+				transition: background .2s ease-in-out;
+			} 
+		}
+		a:hover, a:focus, a:active,
+		&.active a {
+			background-color: #fff;
+			color: $secondary-color;
+			outline: none;
+
+			.highcontrast & {
+				background-color: #fff;
+				color: #000;
+			}	
+			
+		}
+		
+		
+	}
+	
+	@include rwd(large) {
+		justify-content: center;
+		padding-right: 0;
+	}
+	
+}
+
+
+
+#menu-toggle {
+
+	// Hamburger Menu
+	
+	display: block; 
+	height: 23px; width: 23px;
+	position: relative;
+	border: 0; border-radius: 0; padding: 0;
+	cursor: pointer;
+	@include a11y-hide(60px);
+
+	span {
+		position: absolute; 
+		top: 10px; right: 0;
+	}
+	span, span::after, span::before {
+		display: block;
+		width: 23px; height: 3px;
+		background-color: #000;
+		transition: all .3s linear;
+	}
+	span::after, span::before {
+		position: absolute;
+		content: ""; 
+	}
+	span::after {bottom: -9px; left: 0;}
+	span::before {top: -9px; left: 0;}
+
+	&.menu-opened span {
+		background-color: transparent; 
+		height: 1px;
+	}
+	&.menu-opened span::after {
+		top: 0;
+		transform: rotate(45deg);
+		background-color: $primary-color;
+	}
+	&.menu-opened span::before {
+		top: 0;
+		transform: rotate(-45deg);
+		background-color: $primary-color;
+	}
+
+	&:hover {
+		background-color: transparent;
+	}	
+	
+	@include rwd(medium) {
+		display: none;				
+	}
+}

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Un design accessible - WordCamp Lille 2018</title>
+	<meta name="author" content="Thomas Villain">
+	<meta name="description" content="Dans le cadre d'un projet web, intégrer l'accessibilité commence dès la conception graphique.">
+
+	<link rel="stylesheet" type="text/css" href="css/pridx.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	
+<div id="wrapper">
+
+
+<!-- 	// Head ***** -->
+	
+	<header id="app_head" role="banner">
+		
+		<nav id="skiplinks_nav">
+			<ul class="skiplinks-menu">
+				<li><a href="#main_nav">Aller au menu</a></li>
+				<li><a href="#fullpage">Aller au contenu</a></li>
+			</ul>
+		</nav>
+		
+		<nav id="main_nav" role="navigation">
+			<ul class="main-menu">
+				<li><a href="#a11y">A11y</a></li>
+				<li><a href="#typography">Typographie</a></li>
+				<li><a href="#navigation">Navigation</a></li>
+				<li><a href="#forms">Formulaires</a></li>
+				<li><a href="#colors">Couleurs</a></li>
+				<li><a href="#images">Images</a></li>			
+			</ul>
+		</nav>
+		
+		<div class="contrast-switch">
+			<button class="toggle-highcontrast" type="button">Fort contraste</button>
+			<button class="toggle-remove" type="button">Rétablir le contraste</button>
+		</div>
+		
+	</header>
+	
+	
+	<main id="fullpage" role="main">
+	
+		
+	<!-- 	// Cover ***** -->
+	
+	
+		<div class="section cover-section">
+			
+			<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+			<div class="info-bulle">
+				<p>L’accessibilité numérique, c'est proposer aux internautes en situation de handicap, <em>que ce soit au niveau moteur, visuel, auditif ou cognitif,</em> un accès au web et une navigation optimale quel que soit leur équipement.</p>
+				<p>On pense parfois (quand on y pense) que l'accessibilité est un ensemble de techniques à mettre en place au moment de l'intégration et du développement… mais non :)</p>
+				<p>En réalité, intégrer l'accessibilité commence dès la conception graphique ! C'est pourquoi nous allons parler de <strong>design accessible</strong> :)</p>
+				<button class="info-bulle-close" type="button" onclick="window.location.href='#fullpage'">OK merci !</button>
+			</div>
+			
+			<div class="inner">
+				<h1 class="title-main wow animated bounceIn" data-wow-delay="1s">
+					un
+					<br>
+					design
+					<br>
+					accessible
+					<span class="url">https://lab.anybodesign.com/wclille/</span>
+				</h1>
+				
+				<img class="cover-box wow animated fadeInLeft" src="img/camion-open.png" alt="visuel baraque à frites wordcamp lille 2018">
+			</div>
+			
+			<img class="cover-star star-rotation" src="img/icon/star-big.svg" alt="motif étoile">
+			
+			<a href="#a11y" class="hand-white hand-centered wow animated bounceInUp" data-wow-delay="1.5s">On commence ?</a>
+		</div>
+		
+		
+	<!-- 	// A11y ***** -->
+	
+	
+		<div class="section" id="a11y">
+			
+			<div class="subsection">
+			
+			<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+			<div class="info-bulle">
+				<p>Souvent, vous verrez que les gens font référence à un truc appelé <em>a11y</em>… sous forme de hashtag sur Twitter, ou tout simplement dans le corps du texte d'un post, d'un commentaire. Mais qu'est-ce que c'est ?</p>
+				<p>a11y, ça veut dire <em>"accessibility"</em> en anglais. On a le A, la première lettre, et le Y, la dernière. Entre les 2 il y a 11 autres lettres :)</p>
+				<p>C'est un <em>numéronyme,</em> un mot basé sur des chiffres.</p>
+				<button class="info-bulle-close" type="button" onclick="window.location.href='#a11y'">OK merci !</button>
+			</div>
+				
+				<div class="inner">
+					
+					<div class="row x-middle">
+						
+						<div class="col-6">
+							<figure class="wow animated slideInLeft wc-soap">
+								<img src="img/frites-a11y.jpg" alt="frites du wordcamp lille">
+							</figure>
+						</div>
+						
+						<div class="col-6">
+							<div class="a11y-slider slicky-slider">
+								
+								<div class="slicky-slide">
+									<h2 class="a11y-title">a11y</h2>
+								</div>
+								<div class="slicky-slide">
+									<p class="a11y-numeronym"><span>a</span>ccessibilit<span>y</span></p>
+									<p class="a11y-number">11</p>
+								</div>
+
+								<div class="slicky-slide">
+									<h2 class="a11y-title">i18n</h2>
+								</div>
+								<div class="slicky-slide">
+									<p class="a11y-numeronym"><span>i</span>nternationalizatio<span>n</span></p>
+									<p class="a11y-number large">18</p>
+								</div>
+
+
+								<div class="slicky-slide">
+									<h2 class="a11y-title">w3c</h2>
+								</div>
+								<div class="slicky-slide">
+									<h2 class="a11y-title">k7</h2>
+								</div>
+
+								
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+
+				<a href="#a11y_devices" class="hand-btn hand-centered wow animated bounceInUp" data-wow-delay=".5s">On continue ?</a>
+			</div>
+		
+			<!-- end subsection 1 -->
+
+			
+			<div class="subsection" id="a11y_devices" style="background-image: url(img/devices.jpg);">
+
+				<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+				<div class="info-bulle">
+					<p>La navigation web, telle que la plupart d'entre nous la pratiquent, est parfois très très très différente de celle d'une personne handicapée.</p>
+					<p>Par exemple, pour les non-voyants ou mal-voyants les designs graphiques que nous pouvons produire ne vont pas avoir la même importance. Ces personnes vont avoir recours à d'autres technologies pour naviguer, telles que les lecteurs d'écran, des outils qui vont littéralement lire le code source des pages pour les décrire à l'internaute. Ces personnes vont donc <em>"écouter"</em> les pages et les documents du site. Au contraire, pour les sourds et les malentendants, tout ce qui sera audio, notamment les vidéos, devra comporter des sous-titres et une transcription textuelle. On pensera également aux transcriptions textuelles pour les images complexes (infographies). Dans le cas de certains handicaps moteurs, la navigation à la souris ou autre appareil de pointage n'est pas possible… la navigation au clavier (et même certains types bien particuliers de claviers) est donc préférée.</p>
+					<p>On va donc vite s'apercevoir que <strong>notre habillage visuel ne se suffira pas à lui-même</strong> pour satisfaire <em>100%</em> des internautes.</p>
+					<button class="info-bulle-close" type="button" onclick="window.location.href='#a11y_devices'">OK merci !</button>
+				</div>
+
+
+				<p class="a11y-devices-title wow animated fadeInUp">
+					Lecteur d'écran et plage braille
+				</p>
+				
+				<a href="#a11y_icons" class="hand-btn hand-centered wow animated bounceInUp" data-wow-delay=".5s">La suite !</a>
+			</div>
+			
+			<!-- end subsection 2 -->
+
+			<div class="subsection" id="a11y_icons">
+
+
+				<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+				<div class="info-bulle">
+					<p>Pourquoi se soucier de l'accessibilité ?</p>
+					<p>S'il ne devait y avoir qu'une seule raison ce serait : <strong>le web doit être accessible à tout le monde,</strong> quel que soit l'âge, le handicap… c'est même Tim Berners-Lee qui le dit. C'est un des fondements du web.</p>
+					<p>Il y a aussi d'autres raisons pour s'intéresser et surtout intégrer l'accessibilité dans son workflow. Par exemple il y a en France environ 12 millions de personnes handicapées, mais internautes potentiels… C'est beaucoup plus que le nombre d'utilisateurs d'Internet Explorer 7, 8 et 9 réunis.</p>
+					<p>Se soucier de l'accessibilité va aussi nous permettre de veiller à la qualité et la validité du code html, et accessoirement, bon nombre de bonnes pratiques sont également bénéfiques pour le référencement.</p>
+					<button class="info-bulle-close" type="button" onclick="window.location.href='#a11y_icons'">OK merci !</button>
+				</div>
+
+
+				<div class="inner">
+					
+					<div class="a11y-icons-slider slicky-slider-dark">
+	
+						<div class="slicky-slide">
+							<div class="a11y-icons">
+								<img src="img/icon/a11y.svg" alt="icone accessibilité">
+								<p class="a11y-icons-title">
+									le web doit être accessible à tout le monde
+									<span>Tim Berners-Lee, fondateur du W3C</span>
+								</p>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="a11y-icons">
+								<img src="img/icon/graph.svg" alt="icone pie chart">
+								<p class="a11y-icons-title">
+									20% de la population
+									<span>12 millions de français en situation de handicap</span>
+								</p>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="a11y-icons">
+								<img src="img/icon/IE.svg" alt="icone internet explorer">
+								<p class="a11y-icons-title">
+									- de 7%
+									<span>d'utilisateurs de IE 6 à IE 10 confondus</span>
+								</p>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<a href="#typography" class="hand-btn hand-centered wow animated bounceInUp" data-wow-delay=".5s">On passe à la typo maintenant</a>
+			</div>
+			
+
+			
+		</div>
+		
+		
+
+	<!-- 	// Typography ***** -->
+	
+	
+		<div class="section" id="typography">
+
+			<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+			<div class="info-bulle">
+				<p>Lors de la création de notre style guide, on veillera donc à plusieurs choses importantes :</p>
+				<p><strong>Prévoir des styles pour toutes les balises HTML et une logique pour les niveaux de titre :</strong> les lecteurs d'écrans décrire les balises html à l'internaute (listes, citations...). Ne pas oublier les tableaux html, même si aujourd'hui ils ne servent plus à composer les mises en page, ils ont leur utilité, et il ne faut pas oublier de prévoir les intitulés des colonnes (thead, th). Au sujets des niveaux de titres, une bonne hiérarchie à également un effet bénéfique pour l'indexation des pages.</p>
+<p><strong>Respecter les règles typographiques :</strong> certaines personnes en situation de handicap cognitif (dyslexie, troubles neuro…) peuvent avoir du mal à lire ou à comprendre. On va donc s'efforcer de soigner la présentation au maximum :
+
+<em>Accentuer les capitales,</em> car même si en fonction du contexte on peut arriver à "bien lire" on évitera les contresens. <em>Ne pas justifier les textes</em> (césures et blancs difficiles/impossible à gérer), prévoir de bons interlignages et des largeurs de colonnes raisonnables (70 signes env.). <em>Réserver le soulignement pour les liens uniquement</em> (aujourd'hui c'est vraiment un acquis, lorsqu'un mot est souligné on a envie de cliquer dessus)</p>
+
+<p><strong>Prévoir l'agrandissement du texte :</strong> ça fâche parfois les designers, mais c'est ainsi : mon Papy il n'arrive pas à lire quand c'est écrit trop petit, alors il grossit le texte. Il faut donc anticiper cette pratique et éviter de contraindre le texte dans des blocs de dimensions fixes.</p>
+				<button class="info-bulle-close" type="button" onclick="window.location.href='#typography'">OK merci !</button>
+			</div>
+
+
+			
+			<div class="inner">
+				<h2 class="title-std wow animated wobble">
+					Typographie
+				</h2>
+				
+				<div class="section-content">
+					
+					<div class="row x-center">
+						<div class="col-6">
+							<h3 class="h2-like">Welsh traditionnel à la bière </h3>
+							<p>Facile et rapide à préparer, vous ne pouvez pas passer à côté de cette recette du Welsh traditionnelle de Ch'Nord-Pas de Calais.</p>
+							
+							<h4 class="h3-like">Ingrédients</h4>
+								<div class="bluecard">
+									<ul>
+										<li>800 g de cheddar</li>
+										<li>25 cl de bière brune</li>
+										<li>1 pain de campagne non tranché</li>
+										<li>4 tranches de jambon blanc (épaisses si possible)</li>
+										<li>4 oeufs</li>
+										<li>4 cuillères à soupe de moutarde à l'ancienne</li>
+										<li>Poivre</li>
+									</ul>
+								</div>
+
+							<table>
+								<caption><h5>Récap'</h5></caption>
+								<thead>
+									<tr>
+										<th scope="col">Temps de cuisson</th>
+										<th scope="col">Temps de préparation</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-title="Nombre de personnes : ">10 minutes</td>
+										<td data-title="Temps de préparation : ">15 minutes</td>
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+						
+						<div class="col-6">
+							<h4 class="h3-like">La recette en vidéo</h4>
+							
+							<div class="video-container">
+								<figure class="video-player" role="group">
+									<a href="#" title="lancer la vidéo" class="play"><img src="img/welsh.jpg" alt="photo apétissante du Welsh"></a>
+									<figcaption>
+										La Welsh de Ch'nord
+									</figcaption>
+								</figure>
+									
+								<button class="action-btn show-transcript" type="button" aria-expanded="false">Transcription de la vidéo</button>
+								<div class="transcript bluecard">
+									<p>Dans une casserole, faites fondre le cheddar mélangé avec la bière et la moutarde. Vous obtiendrez une pâte bien lisse. Assaisonner de sel et poivre. Imbiber de 25cl de bière les tranches de pain. Mettez vos tranches dans des ramequins individuels. Déposer une tranche de jambon au-dessus de chaque pain, puis napper abondamment chaque ramequin avec la crème de cheddar qui recouvrira la tranche de jambon.</p>
+									<p>Enfourner le tout 10 min au four (180° Th 6).</p>
+								</div>
+							</div>
+									
+								
+						</div>
+						
+						<div class="col-12">
+							<h4 class="h3-like">Préparation</h4>
+							
+							<div class="row nested">
+								
+								<div class="col-6">
+									<p>Dans une casserole, faites fondre le cheddar <span style="text-decoration: underline;">mélangé avec la bière</span> et la moutarde. Vous obtiendrez <em>une pâte bien lisse.</em></p> 
+									<p>Assaisonner de sel et poivre.</p> 
+									<p>Imbiber de 25cl de bière les tranches de pain. Mettez vos tranches dans des ramequins individuels. Déposer une tranche de jambon au-dessus de chaque pain, puis napper abondamment chaque ramequin avec la crème de cheddar qui recouvrira la tranche de jambon.</p>
+									<p>Enfourner le tout 10 min au four (180° Th 6). <a href="#more" title="exemple de lien">(Ça c'est un lien)</a></p>    									
+								</div>
+								
+								<div class="col-6">
+									<p>Pour les plus gourmands, vous pouvez éventuellement rajouter un œuf au-dessus de la préparation.</p>
+									<p>Servez ce plat bien chaud sorti du four avec une belle portion de frites et une bière Jenlain blonde d'Abbaye.</p>
+									
+									<div class="uppercase-example">
+										<p>On dit : il reste un petit pain garni de <strong>pâté !</strong></p>
+										<p>Pas : il reste un petit pain garni de pate !</p>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+						
+						<div class="col-6" id="more">
+							<blockquote>
+								Ce plat d'origine galloise est une honte pour la gastronomie française mais une véritable tuerie de la gastronomie du nord ! Un délice avec des frites.
+								<cite>Marloon, topito.com</cite>
+							</blockquote>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+
+
+	<!-- 	// Navigation ***** -->
+	
+	
+		<div class="section" id="navigation">
+
+
+			<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+			<div class="info-bulle">
+				<p>Il est très important d'avoir une logique dans le design de ces éléments afin qu'on puisse identifier rapidement les boutons, les menus etc. Mais il y a aussi d'autres petites choses à prendre en compte.</p>
+				<p><strong>Zone de clic :</strong> prévoir des zones cliquables de taille suffisante pour les utilisateurs ayant des problèmes de précision. Idem sur terminal tactile type smarthpone, penser aux gros doigts :)</p>
+				<p><strong>Le focus en outline, c'est moche ! :</strong> lorsqu'on navigue au clavier, c'est avec la touche "Tab". Chaque pression sur Tab fait passer le focus de lien en lien, et pour qu'on sache où on se trouve, le focus est stylé par défaut sous forme de bordure en pointillés. Souvent, le designer (ou son client) trouve ça extrêmement moche et le supprime avec un bon vieux "outline: none" en CSS ! C'est radical mais il ne faut surtout pas faire ça. On peut très bien remplacer ce outline par autre chose qui soit tout aussi visible. De ce côté on peut laisser libre court à sa créativité, mais il faut impérativement un repère visuel pour le focus. Ce pauvre focus n'est donc pas obligé d'être moche :)</p>
+				<p><strong>Skiplinks :</strong> tant qu'on parle du focus, on a vu qu'en naviguant avec la touche Tab on passe de lien en lien, mais si l'utilisateur souhaite passer directement à la partie contenu il va falloir lui épargner de faire 56 pressions sur la touche si le menu à 56 entrées :)
+Pour cela il y a les skiplinks, ou liens d'évitement. Ce sont des liens à placer en tout début de page et qui vont, grâce à des ancres, permettre se de rendre directement au menu, à la recherche ou au contenu. Il faut donc penser à un design pour ces liens. On n'est d'ailleurs pas obligé de les afficher en permanence, ils peuvent être hors champs et n'apparaitre qu'au focus.</p>
+				<p><strong>.current-menu-item :</strong> petit détail mais qui a son importance, ne pas oublier un style pour la page ou la catégorie en cours dans les menus. C'est un repère visuel important.
+				<p><strong>Les liens :</strong> que l'on parle de liens hypertextes ou de boutons, de call to action… il faut prévoir de styler tous les états : link, active, hover, focus, visited. On peut aussi prévoir un style graphique différent pour les liens externes, ceux qui vont ouvrir un nouvel onglet, par exemple avec un petit picto.</p>
+				<button class="info-bulle-close" type="button" onclick="window.location.href='#navigation'">OK merci !</button>
+			</div>
+
+
+			<h2 class="title-std inverted wow animated slideInUp">
+				Navigation
+			</h2>
+			
+			<div class="inner">
+	
+				<div class="section-content">
+					<div class="nav-slider slicky-slider">
+	
+						<div class="slicky-slide">
+							<div class="nav-slide row x-center">
+								<div class="col-2">
+									<img src="img/icon/cursor.svg" alt="icone curseur">
+								</div>
+								<div class="col-6">
+									<h3>Zone de clic</h3>
+									<p>Prévoir des zones cliquables de taille suffisante pour les utilisateurs ayant des problèmes de précision. Sur les petits terminaux tactile, type smartphones, penser aux gros doigts :)</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="nav-slide row x-center">
+								<div class="col-2">
+									<img src="img/icon/outline.svg" alt="icone outline">
+								</div>
+								<div class="col-6">
+									<h3>L'outline, c'est moche</h3>
+									<p>On peut très bien remplacer l'outline par autre chose qui soit tout aussi visible. De ce côté on peut laisser libre court à sa <a href="#navigation" title="Lien pour exemple de focus">créativité,</a> mais il faut impérativement un repère visuel pour le focus. <br>
+Ce pauvre focus n'est pas obligé d'être moche :)</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="nav-slide row x-center">
+								<div class="col-2">
+									<img src="img/icon/skip.svg" alt="icone skiplinks">
+								</div>
+								<div class="col-6">
+									<h3>Skiplinks</h3>
+									<p>Ou liens d'évitement. Ce sont des liens à placer en tout début de page et qui vont, grâce à des ancres, permettre à l'utilisateur de se rendre directement au menu, à la recherche ou au contenu.</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="nav-slide row x-center">
+								<div class="col-2">
+									<img src="img/icon/current.svg" alt="icone current menu">
+								</div>
+								<div class="col-6">
+									<h3 class="lowercase">.current-menu-item</h3>
+									<p>Ne pas oublier un style graphique pour l'item du menu de la page ou de la catégorie en cours. C'est un repère visuel important.</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="nav-slide row x-center">
+								<div class="col-2">
+									<img src="img/icon/link.svg" alt="icone liens">
+								</div>
+								<div class="col-6">
+									<h3>Liens</h3>
+									<p>Il faut prévoir de styler <a href="#navigation" title="Lien pour exemple de focus">tous les états :</a> <em>link, active, hover, focus, visited.</em></p>
+									<p>On peut aussi prévoir un style graphique différent pour les <a href="https://wordpress.org/" target="_blank" title="Lien vide pour exemple de focus (ouvre un nouvel onglet)">liens externes,</a> ceux qui vont ouvrir un nouvel onglet, par exemple avec un petit picto.</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+
+	<!-- 	// Forms ***** -->
+	
+	
+		<div class="section" id="forms">
+
+			<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+			<div class="info-bulle">
+				<p>Les formulaires sont très importants car ils permettent d'envoyer/demander des informations, de s'inscrire, de se connecter… C'est pourquoi il est capital que l'accessibilité soit bonne à ce niveau.</p>
+				<p><strong>Prévoir le focus :</strong> comme pour les liens, il va falloir designer tous les états des éléments de formulaire : le champs standard, le champs recevant le focus, et même le champs avec une valeur renseignée, ou un placeholder.</p>
+				<p><strong>Fieldset, section de formulaire :</strong> on peut aussi prévoir un style graphique pour les fieldsets, ou groupes de champs, qui sont des regroupements thématiques de champs, de cases à cocher, et leur balise legend.</p>
+				<p><strong>Un placeholder n'est pas une étiquette (label) :</strong> pour "gagner de la place" le designer à tendance à intégrer les étiquettes dans les champs de formulaire. Ce n'est pas une bonne idée. Ce type de texte est un placeholder : une mention pour aider à comprendre ce qu'il faut saisir dans le champs, ou un exemple de saisie. Le placeholder disparait dès qu'une valeur est renseignée, il est donc parfois malaisé de comprendre à quoi correspond telle ou telle valeur sans les étiquettes qui vont avec, par exemple sur de longs formulaires de profil. Les lecteurs d'écran ont besoin des étiquettes pour indiquer à l'internaute ce qu'il faut saisir, et l'étiquette doit être liée au champ afin qu'en cas de navigation au clavier on sache qu'on est au bon endroit. En CSS on peut styler les étiquettes de bien des manières, l'essentiel c'est qu'ils restent bien lisibles</p>
+				<p><strong>Affichage des erreurs :</strong> enfin, on n'oubliera pas de prévoir des styles pour les champs en erreur de validation. Quelque chose de bien visible et d'explicite. On évitera "les champs en erreurs ont un contour rouge"… car malheureusement, tout le monde ne voit pas les couleurs. La couleur ne suffira pas, il faudra ajouter un picto ou bien une ligne de texte (ce champ est obligatoire, ce champ est invalide… par exemple)</p>
+				<button class="info-bulle-close" type="button" onclick="window.location.href='#forms'">OK merci !</button>
+			</div>
+
+
+
+			<div class="inner">
+				
+				<h2 class="title-std wow animated lightSpeedIn">
+					Formulaires
+				</h2>
+				
+				<div class="section-content">
+					<div class="row x-center">
+						
+						<div class="col-10 form-intro">
+						
+							<h3 class="h2-like">Jeu-concours</h3>
+							<p>Répondez à ce questionnaire et participez à notre grand tirage au sort ! <br>
+								Vous aurez peut-être la chance de gagner votre poids en frites :)</p>
+						
+						</div>
+						
+						<div class="col-4">
+							
+							<form>
+								<fieldset>
+									<legend>Durée de votre séjour</legend>
+									<div class="formfield-select">
+										<label for="duree">Combien de temps resterez-vous ?</label>
+										<div class="formfield-select--container">
+											<select id="duree">
+												<option>1 semaine</option>
+												<option>2 semaines</option>
+												<option>3 semaines</option>
+												<option>1 mois</option>
+												<option>3 mois</option>
+												<option>Encore plus</option>										
+											</select>
+										</div>
+									</div>
+								</fieldset>
+								
+								<fieldset>
+									<legend>Activité préférée</legend>
+									
+									<div class="row nested">
+										<div class="col-6">
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="football">
+												<label for="football">Ski</label>
+											</div>
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="petanque">
+												<label for="petanque">Grande roue</label>
+											</div>
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="apero">
+												<label for="apero">Bière</label>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="sieste">
+												<label for="sieste">Sieste</label>
+											</div>
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="cuisine">
+												<label for="cuisine">Cuisine</label>
+											</div>
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="marcel">
+												<label for="marcel">Fricadelle</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								
+								<fieldset>
+									<legend>Civilité</legend>
+									
+									<div class="inline-fields">
+										<div class="formfield-radio">
+											<input type="radio" id="monsieur" name="genre">
+											<label for="monsieur">M.</label>
+										</div>
+										<div class="formfield-radio">
+											<input type="radio" id="madame" name="genre">
+											<label for="madame">Mme</label>
+										</div>
+									</div>
+									
+								</fieldset>
+								
+								<fieldset>
+									<legend>Qui êtes-vous ?</legend>
+									<div class="formfield-text">
+										<label for="nom">Nom et prénom</label>
+										<input type="text" id="nom" placeholder="Ex: Dany Boo">
+									</div>
+									<div class="formfield-text">
+										<label for="email">Adresse e-mail</label>
+										<input type="email" id="email" placeholder="Ex: dany@boo.fr">
+									</div>
+									<div class="formfield-textarea">
+										<label for="message">Un petit message</label>
+										<textarea id="message" placeholder="Ex: Chti qu'i piche conte el vint, cha li rkét toudi su sin néz…"></textarea>
+									</div>
+								</fieldset>
+
+								<div class="formfield-checkbox">
+									<input type="checkbox" id="optin">
+									<label for="optin">Envoyez-moi des nouvelles du nooord</label>
+								</div>
+								
+								<div class="submit-container">
+									<input type="submit" value="Envoyer">
+								</div>
+									
+								
+								
+							</form>
+								
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>			
+
+
+	<!-- 	// Colors ***** -->
+	
+	
+		<div class="section" id="colors" style="background-image: url(img/beer.jpg);">
+
+			<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+			<div class="info-bulle">
+				<p>Définir des rapports couleurs pertinents peut être un long travail ! Malheureusement, les personnes ayant des troubles de la perception des couleurs n'est profiteront pas. C'est pourquoi il est impératif de <strong>ne jamais induire de sens lié à la couleur !</strong></p>
+				<p><strong>Un contraste suffisant :</strong> la première des tâches qui nous attend c'est de vérifier que nos contrastes sont suffisants. Un texte gris clair sur fond blanc ne sera pas assez contrasté, écrire en blanc sur un fond de couleur claire ne fonctionnera sans doute pas non plus ! Il existe plusieurs outils pour vérifier tout ça :
+					<ul>
+						<li>Le plugin Stark pour les utilisateurs de Sketch est vraiment très bien</li>
+						<li>Pour Photoshop, il existe aussi Color Contrast Checker</li>
+						<li>Mais aussi pas mal d'outils en ligne (liste dans le readme sur github)</li>
+					</ul>
+				<p><strong>Une version alternative ?</strong> Si l'exigence de notre design est telle qu'on n'arrive pas à trouver d'alternative accessible au niveau des contrastes, alors on peut envisager une feuille de style dédiée pour les forts contrastes. C'est un travail supplémentaire, mais on va pouvoir ajouter à notre header une nouvelle entrée : "Fort contraste". Sur cette feuille de style on pourra prévoir une palette à fort contraste, en noir et blanc ou autre…</p>
+				<button class="info-bulle-close" type="button" onclick="window.location.href='#colors'">OK merci !</button>
+			</div>
+
+			
+			<div class="inner">
+				<h2 class="title-std wow animated jackInTheBox">
+					Couleurs
+				</h2>
+			</div>
+			
+		</div>	
+
+
+	<!-- 	// Images ***** -->
+	
+	
+		<div class="section" id="images">
+
+
+			<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
+			<div class="info-bulle">
+				<p>Définir des rapports couleurs pertinents peut être un long travail ! Malheureusement, les personnes ayant des troubles de la perception des couleurs n'est profiteront pas. C'est pourquoi il est impératif de <strong>ne jamais induire de sens lié à la couleur !</strong></p>
+				<p><strong>Décrire les images :</strong> en HTML on renseignera l'attribut <em>"alt"</em> de la balise image avec une description simple de la photo ou de l'illustration. Au niveau du design on pourra aussi prévoir de styler la balise <em>"figcaption"</em> pour les cas où les images sont explicitement légendées.</p>
+				<p><strong>Un sens explicite :</strong> concernant l'usage des pictogrammes, on remarquera que certains peuvent être assez obscurs ou <em>interprétés de différentes manières.</em> Dans le doute, un intitulé explicite ne sera pas de trop, dans les cas de déficience cognitive notamment. Le pictogramme viendra alors illustrer l'intitulé plutôt que d'exiger que son sens soit deviné.</p>
+				<button class="info-bulle-close" type="button" onclick="window.location.href='#images'">OK merci !</button>
+			</div>	
+			
+					
+			<div class="inner">
+				<h2 class="title-std wow animated tada">
+					Images et pictos
+				</h2>
+
+				<div class="section-content">
+					<div class="images-slider slicky-slider">
+						
+						<div class="slicky-slide">
+							<div class="row">
+								<figure class="col-4 images-slider-picture" role="group">
+									<img src="img/lille.jpg" alt="grand place de lille">
+									<figcaption>
+										Bienvenue dans le Ch'nord !
+									</figcaption>
+								</figure>
+								<figure class="col-4 images-slider-picture" role="group">
+									<img src="img/snowglobe.jpg" alt="boule à neige">
+									<figcaption>
+										Bin ch'est du bieau ! 
+									</figcaption>
+								</figure>
+								<figure class="col-4 images-slider-picture" role="group">
+									<img src="img/tarte-sucre.jpg" alt="tarte au sucre">
+									<figcaption>
+										T'auras pas inne séquoi ?
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="row x-center">
+								<figure class="centered col-8">
+									<img src="img/icons.png" alt="icones sans libellés">
+								</figure>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="row x-center">
+								<figure class="centered col-8">
+									<img src="img/icons2a.png" alt="icones sans libellés">
+								</figure>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="row x-center">
+								<figure class="centered col-8">
+									<img src="img/icons2b.png" alt="icones avec libellés">
+								</figure>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="row x-center">
+								<div class="centered col-3">
+									<a href="#thanks" title="Et voilà c'est fini !">
+										<img class="last-icon" src="img/icons3.png" alt="picto mystérieux">
+									</a>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			
+			</div>
+			
+		</div>		
+
+	
+	<!-- 	// Thanks ***** -->
+	
+	
+		<div class="section thanks-section" id="thanks">
+			
+			<div class="inner">
+				<h2 class="title-main wow animated bounceInDown">
+					merci !
+				</h2>
+				
+				<div class="id-card mine">
+					<p class="author">Thomas Villain</p>
+					<p class="author-infos">
+						@anybodesign<br>
+						https://anybodesign.com
+					</p>
+				</div>
+				
+				<div class="id-card">
+					<p class="wpparis-infos">
+						WP Paris<br>
+						https://wpparis.fr
+					</p>
+				</div>
+				
+				<div class="thanks-card dark-bg">
+					<p><a href="https://github.com/anybodesign/wclille" target="_blank" title="Code source, démo et références disponibles sur GitHub (ouvre un nouvel onglet)">https://github.com/anybodesign/wclille/</a></p>
+					<p>Merci à <a href="http://www.accesbilis.fr" target="_blank" title="Site web de Claire Bizingre (ouvre un nouvel onglet)">Claire Bizingre</a> pour la relecture, les tests et les conseils !</p>
+				</div>
+				
+				<img class="cover-box wow animated jackInTheBox" src="img/camion.png" alt="visuel baraque à frites wordcamp lille">
+			</div>
+			
+			<img class="cover-star wow star-rotation" src="img/icon/star-big.svg" alt="motif étoile">
+			
+		</div>	
+
+
+		
+	</main> <!-- End fullPage -->
+
+</div>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+	new WOW().init();
+</script>
+
+</body>
+</html>

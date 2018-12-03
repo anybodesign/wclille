@@ -1,0 +1,99 @@
+// -------------------------
+// = Variables
+// -------------------------
+
+
+// Grid Padding & Max Width
+
+
+$grid-padding: .625em; 		// @note: The padding gutter! equiv. 10px
+$max-width: 70em;			// @note: 1120px
+
+
+
+// Break-Points
+
+
+$width-small: 25em; 		// @note: 400px
+$width-medium: 40em;		// @note: 640px
+$width-large: 50em; 		// @note: 800px
+$width-wide: 80em;	 		// @note: 1280px
+
+
+
+// Colors
+
+
+$primary-color: #F8E71C;
+$secondary-color: #5C000B;
+$third-color: #F5A623;
+$fourth-color: #D0021B;
+$text-color: $secondary-color;
+$bg-color: #fff;
+
+
+// Fonts
+
+$fontface-regular: url('fonts/asap-regular-webfont.woff') format('woff');
+@font-face {
+	font-family: 'Regular';
+	src: $fontface-regular;
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontface-italic: url('fonts/asap-italic-webfont.woff') format('woff');	
+@font-face {
+	font-family: 'Italic';
+	src: $fontface-italic;
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontface-bold: url('fonts/asap-medium-webfont.woff') format('woff');
+@font-face {
+	font-family: 'Bold';
+	src: $fontface-bold;
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontface-bolditalic: url('fonts/asap-mediumitalic-webfont.woff') format('woff');
+@font-face {
+	font-family: 'BoldItalic';
+	src: $fontface-bolditalic;
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontface-title: url('fonts/MiriamLibre-Bold.woff') format('woff');
+@font-face {
+	font-family: 'Title';
+	src: $fontface-title;
+	font-weight: normal;
+	font-style: normal;
+}
+$fontface-title-light: url('fonts/MiriamLibre-Regular.woff') format('woff');
+@font-face {
+	font-family: 'Title-Light';
+	src: $fontface-title-light;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// Customize your Font-Stack
+
+$font-stack: Helvetica, Arial, sans-serif;
+
+// The Fonts
+
+$font-title: 'Title', $font-stack;
+$font-title-light: 'Title-Light', $font-stack;
+$font-regular: 'Regular', $font-stack;
+$font-italic: 'Italic', $font-stack;
+$font-bold: 'Bold', $font-stack;
+$font-bolditalic: 'BoldItalic', $font-stack;
+
+$font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+
