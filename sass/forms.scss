@@ -48,6 +48,10 @@ select {
 	.highcontrast & {
 		color: #000;
 		border-color: #000;
+		
+		&:focus {
+			background-color: #000;
+		}
 	}	
 	
 }
@@ -142,6 +146,12 @@ input[type="submit"] {
 	transition: transform .4s ease-in-out;
 	border-radius: 2.6rem;
 	
+	.highcontrast & {
+		background-color: #000;
+		border-color: #000;
+		color: #fff;
+	}
+	
 }
 input[type="submit"]:hover,
 input[type="submit"]:focus {
@@ -150,6 +160,12 @@ input[type="submit"]:focus {
 	border-color: $primary-color;
 	transform: scale(1.1);
 	outline: none;
+
+	.highcontrast & {
+		border-color: #000;
+		color: #000;
+	}
+
 }
 
 .submit-container {

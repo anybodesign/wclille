@@ -98,6 +98,16 @@ div.bg-img {
 		&::after {
 			background: url(img/icon/star-white.svg) center bottom no-repeat;
 		}
+
+		.highcontrast & {
+			background-color: #000;
+			color: #fff;
+
+			&::after {
+				background-image: url(img/icon/star-yellow.svg);
+			}
+
+		}		
 	}
 	
 
@@ -425,7 +435,7 @@ div.bg-img {
 	}
 
 	.highcontrast & {
-		background-image: none !important;
+		background-color: #fff;
 	}	
 
 }
@@ -614,6 +624,11 @@ div.bg-img {
 		& * {
 			color: #fff;
 		}
+		
+		.highcontrast & {
+			background-color: #000;
+		}
+
 	}
 	
 	@include rwd(large) {
@@ -648,6 +663,10 @@ div.bg-img {
 	padding: $grid-padding*2;
 	background-color: $secondary-color;
 	z-index: 1;
+
+	.highcontrast & {
+		background-color: #000;
+	}
 	
 	@include rwd(large) {
 		position: absolute;

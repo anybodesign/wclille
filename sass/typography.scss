@@ -160,6 +160,7 @@ p a {
 			color: $primary-color;
 			border-bottom-color: transparent;
 			background-color: $secondary-color;
+			color: #fff;
 		}
 
 		.dark-bg & {
@@ -238,7 +239,12 @@ blockquote {
 		@include rwd(large) {
 			top: 3rem;
 			left: -80px;
-		}	
+		}
+		
+		.highcontrast & {
+			filter: grayscale(100%);
+		}
+	
 	}
 }
 q,
@@ -499,6 +505,7 @@ input[type=submit].action-btn {
 
 	.highcontrast & {
 		background-color: #000;
+		color: #fff !important;
 	}	
 
 	&:hover,
@@ -508,6 +515,7 @@ input[type=submit].action-btn {
 	
 		.highcontrast & {
 			background-color: #777;
+			color: #fff;
 		}	
 		
 	}
@@ -532,6 +540,7 @@ input[type=submit].hand-btn,
 	.highcontrast & {
 		background-color: #000;
 		border-color: #000;
+		color: #fff;
 	}	
 	
 	&:focus,
@@ -543,7 +552,9 @@ input[type=submit].hand-btn,
 
 		.highcontrast & {
 			background-color: #666;
+			background-image: url(img/icon/hand-white.svg);
 			border-color: #666;
+			color: #fff;
 		}	
 	}
 	
@@ -555,6 +566,10 @@ input[type=submit].hand-white {
 	background-image: url(img/icon/hand.svg);
 	background-color: #fff;
 	border: 0; 
+
+	.highcontrast & {
+		background-image: url(img/icon/hand-white.svg);
+	}
 }
 
 
