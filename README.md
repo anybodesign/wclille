@@ -31,3 +31,8 @@ Et ici en téléchargement : <https://lab.anybodesign.com/wclille/layout/>
 * [How icons are ruining interfaces - Axess Lab](https://axesslab.com/icons-ruining-interfaces/)
 * [Tester le niveau d’accessibilité d’un thème WordPress — Claire Bizingre](http://www.accesbilis.fr/tester-le-niveau-daccessibilite-dun-theme-wordpress/)
 * [Designing for Cognitive Differences](https://alistapart.com/article/designing-for-cognitive-differences)
+
+### Sources
+* <https://informations.handicap.fr/art-infos-handicap-archives-703-476.php>
+* <https://www.talenteo.fr/chiffres-handicap-2015/>
+* <https://www.handirect.fr/chiffres-cles-sur-le-handicap-france/>
