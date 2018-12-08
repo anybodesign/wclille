@@ -177,7 +177,7 @@
 				<div class="info-bulle">
 					<p>Pourquoi se soucier de l'accessibilité ?</p>
 					<p>S'il ne devait y avoir qu'une seule raison ce serait : <strong>le web doit être accessible à tout le monde,</strong> quel que soit l'âge, le handicap… c'est même Tim Berners-Lee qui le dit. C'est un des fondements du web.</p>
-					<p>Il y a aussi d'autres raisons pour s'intéresser et surtout intégrer l'accessibilité dans son workflow. Par exemple il y a en France environ 12 millions de personnes handicapées, mais internautes potentiels… C'est beaucoup plus que le nombre d'utilisateurs d'Internet Explorer 7, 8 et 9 réunis.</p>
+					<p>Il y a aussi d'autres raisons pour s'intéresser et surtout intégrer l'accessibilité dans son workflow. Par exemple il y a en France environ 12 millions de personnes handicapées, mais internautes potentiels… C'est beaucoup plus que le nombre d'utilisateurs d'Internet Explorer, toutes versions confondues.</p>
 					<p>Se soucier de l'accessibilité va aussi nous permettre de veiller à la qualité et la validité du code html, et accessoirement, bon nombre de bonnes pratiques sont également bénéfiques pour le référencement.</p>
 					<button class="info-bulle-close" type="button" onclick="window.location.href='#a11y_icons'">OK merci !</button>
 				</div>
@@ -599,14 +599,16 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 
 			<button class="info-bulle-trigger" type="button" aria-expanded="false">Lire le texte</button>
 			<div class="info-bulle">
-				<p>Définir des rapports couleurs pertinents peut être un long travail ! Malheureusement, les personnes ayant des troubles de la perception des couleurs n'est profiteront pas. C'est pourquoi il est impératif de <strong>ne jamais induire de sens lié à la couleur !</strong></p>
+				<p>Définir des rapports couleurs pertinents peut être un long travail ! Malheureusement, les personnes ayant des troubles de la perception des couleurs n'est profiteront pas. Il y a deux choses auxquelles il faut faire attenton :</p>
 				<p><strong>Un contraste suffisant :</strong> la première des tâches qui nous attend c'est de vérifier que nos contrastes sont suffisants. Un texte gris clair sur fond blanc ne sera pas assez contrasté, écrire en blanc sur un fond de couleur claire ne fonctionnera sans doute pas non plus ! Il existe plusieurs outils pour vérifier tout ça :
 					<ul>
 						<li>Le plugin Stark pour les utilisateurs de Sketch est vraiment très bien</li>
 						<li>Pour Photoshop, il existe aussi Color Contrast Checker</li>
 						<li>Mais aussi pas mal d'outils en ligne (liste dans le readme sur github)</li>
 					</ul>
-				<p><strong>Une version alternative ?</strong> Si l'exigence de notre design est telle qu'on n'arrive pas à trouver d'alternative accessible au niveau des contrastes, alors on peut envisager une feuille de style dédiée pour les forts contrastes. C'est un travail supplémentaire, mais on va pouvoir ajouter à notre header une nouvelle entrée : "Fort contraste". Sur cette feuille de style on pourra prévoir une palette à fort contraste, en noir et blanc ou autre…</p>
+				<p><strong>Une version alternative ?</strong> Si l'exigence de notre design est telle qu'on n'arrive pas à trouver d'alternative accessible au niveau des contrastes, alors on peut envisager une feuille de styles dédiée pour les forts contrastes. C'est un travail supplémentaire, mais on va pouvoir ajouter à notre header une nouvelle entrée : "Fort contraste". Sur cette feuille de style on pourra prévoir une palette à fort contraste, en noir et blanc ou autre…</p>
+				<p><strong>Pas de sens lié à la couleur :</strong> il ne faut jamais induire de sens uniquement par la couleur ! Par exemple : "Les encadrés bleus vous apporteront des indices relatifs aux sections jaunes".
+Certaines personne ne perçoivent pas les couleurs, il faut donc ajouter <em>un élément graphique différenciant.</em> Pour une rubrique active, par exemple : un texte coloré, aacompagné d'un encadré ou d'une bordure.</p>
 				<button class="info-bulle-close" type="button" onclick="window.location.href='#colors'">OK merci !</button>
 			</div>
 
@@ -630,7 +632,7 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 			<div class="info-bulle">
 				<p>Les images et les pictos sont des éléments visuels importants, mais qui ne seront pas vus par tous les visiteurs. C'est pourquoi il est fondamental, comme pour les couleurs, de ne pas induire de sens par une seule image ou pictogramme.</p>
 				<p><strong>Décrire les images :</strong> en HTML on renseignera l'attribut <em>"alt"</em> de la balise image avec une description simple de la photo ou de l'illustration. Au niveau du design on pourra aussi prévoir de styler la balise <em>"figcaption"</em> pour les cas où les images sont explicitement légendées.</p>
-				<p><strong>Un sens explicite :</strong> concernant l'usage des pictogrammes, on remarquera que certains peuvent être assez obscurs ou <em>interprétés de différentes manières.</em> Dans le doute, un intitulé explicite ne sera pas de trop, dans les cas de déficience cognitive notamment. Le pictogramme viendra alors illustrer l'intitulé plutôt que d'exiger que son sens soit deviné.</p>
+				<p><strong>Un sens explicite :</strong> concernant l'usage des pictogrammes, on remarquera que certains peuvent être assez obscurs ou <em>interprétés de différentes manières.</em> Dans le doute, un intitulé explicite ne sera pas de trop, dans les cas de déficience cognitive notamment. Le pictogramme viendra alors illustrer l'intitulé plutôt que d'exiger que sa signification soit devinée.</p>
 				<button class="info-bulle-close" type="button" onclick="window.location.href='#images'">OK merci !</button>
 			</div>	
 			
